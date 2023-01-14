@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
 import './sign-up-form.styles.scss';
@@ -23,7 +23,6 @@ const SignUpForm = () => {
     e.preventDefault();
     const { password, confirmPassword } = formFields;
     if( password != confirmPassword ){
-      setFormFields({password: '', confirmPassword: ''});
       alert('Passwords are not the same!');
       return;
     }
