@@ -1,4 +1,3 @@
-import { calculateBackoffMillis } from "@firebase/util";
 import { useState } from "react";
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
@@ -86,12 +85,7 @@ const SignUpForm = () => {
           name="confirmPassword" 
           value={confirmPassword}
         />
-        <Button 
-          buttonType='google'
-          type='submit'
-        >
-          Sign up
-        </Button>
+        <Button type='submit'>Sign up</Button>
       </form>
     </div>
   )
